@@ -1,5 +1,12 @@
 import React from "react";
 
-const Home = () => <span>Home</span>;
+const Home = ({ userObj }) => {
+    
+    return (
+      <div className="container">
+
+      </div>
+    );
+  };
 
 export default Home;
