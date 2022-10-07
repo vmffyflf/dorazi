@@ -1,10 +1,116 @@
-.textFiled {
+:root {
+    --point_color_lb: #2AA9E0;
+    --beware_color_r: rgb(234, 96, 72);
+    --field_color_wh: rgb(233, 233, 233);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(10, 10, 10);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Auth.js */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.field {
     width: auto;
     height: 30px;
     font-size: 15px;
     border: 0;
-    border-radius: 15px;
+    border-radius: 20px;
     outline: none;
-    padding-left: 10px;
-    background-color: rgb(233, 233, 233);
+    padding: 5px 0px 5px 10px;
+    margin: 5px;
+    box-sizing: content-box;
+}
+
+.form > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.textField {
+    background-color: var(--field_color_wh);
+}
+
+.sign_in {
+    text-align: center;
+    padding: 15px;
+    color: var(--point_color_lb)    
+}
+
+.btn_lb {
+    background-color: var(--point_color_lb);
+    color: white;
+    padding: 5px;
+}
+
+.btn_r {
+    background-color: var(--beware_color_r);
+    color: white;
+    padding: 5px;
+}
+
+.continue_btn {
+    display: flex;
+    margin-top: 10%;
+}
+
+.continue_btn > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.continue_btn > button {
+    width: 50%;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+.btn_icon {
+    padding-left: 3px;
+}
+
+.twt_icon {
+    width: 50px;
+    height: 50px;
+    padding: 7%;
+    color: var(--point_color_lb);
+    margin: auto;
+}
+
+.b_sz_border {
+    box-sizing: border-box;
+}
+
+/* Profile.js */
+.sz_35 {
+    width: 35px;
+    height: 35px;
+}
+
+.profile_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile_form_update {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    margin-bottom: 10%;
+    border-bottom: 2px solid var(--field_color_wh);
 }
