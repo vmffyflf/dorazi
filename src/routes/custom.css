@@ -96,9 +96,9 @@ body {
 }
 
 /* Profile.js */
-.sz_35 {
-    width: 35px;
-    height: 35px;
+.sz_30 {
+    width: 30px;
+    height: 30px;
 }
 
 .profile_form {
@@ -113,4 +113,13 @@ body {
     padding-bottom: 30px;
     margin-bottom: 10%;
     border-bottom: 2px solid var(--field_color_wh);
+}
+
+.icon_align {
+    display: flex;
+    justify-content: center;
+}
+
+.icon_align > * {
+    margin: 0;
 }
