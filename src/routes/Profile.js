@@ -1,12 +1,14 @@
 import React from "react";
 
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const Profile = () => {
-  const navigate = Navigate();
-  const click = (e) => {
-      console.log("back to the home")
-      navigate("/");
+const Profile = () =>
+{
+  const navigate = useNavigate();
+  const click = (e) =>
+  {
+    console.log("back to the home")
+    navigate("/");
   }
   return (
     <div className="form">
@@ -15,7 +17,7 @@ const Profile = () => {
           <input
             type="text"
             className="field"
-            style={{ textAlign: "center" }}
+            style={ { textAlign: "center" } }
           />
           <input
             type="button"
@@ -23,7 +25,7 @@ const Profile = () => {
             className="field btn_lb"
           />
         </div>
-        <input type="button" value="Log Out" className="field btn_r" onClick={click} />
+        <input type="button" value="Log Out" className="field btn_r" onClick={ click } />
       </div>
     </div>
   );

@@ -5,23 +5,24 @@ import Home from "../routes/Home";
 import Profile from "../routes/Profile";
 import Navigation from "./Navigation";
 
-const AppRouter = () => {
+const AppRouter = () =>
+{
     const [isLoggedIn, setIsLoggedIn] = useState(true);
 
     return (
 
         <Router>
-            {isLoggedIn && <Navigation />}
-                <Routes>
-                    {isLoggedIn ? (
-                        <>
-                            <Route path="/" element={<Home />}></Route>
-                        </>
-                    ) : (
-                        <Route path="/" element={<Auth />}></Route>
-                        )}
-                        <Routes path="/profile" element={<Profile />}></Routes>
-                </Routes>
+            { isLoggedIn && <Navigation /> }
+            <Routes>
+                { isLoggedIn ? (
+                    <>
+                        <Route path="/" element={ <Home /> }></Route>
+                        <Route path="/profile" element={ <Profile /> }></Route>
+                    </>
+                ) : (
+                    <Route path="/" element={ <Auth /> }></Route>
+                ) }
+            </Routes>
         </Router>
     );
 };
