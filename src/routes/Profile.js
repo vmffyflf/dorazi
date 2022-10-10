@@ -1,13 +1,15 @@
 import React from "react";
-import { FaTwitter, FaUserAlt } from "react-icons/fa";
+
+import { Navigate } from "react-router-dom";
 
 const Profile = () => {
+  const navigate = Navigate();
+  const click = (e) => {
+      console.log("back to the home")
+      navigate("/");
+  }
   return (
     <div className="form">
-      <div className="icon_align">
-        <FaTwitter className="twt_icon sz_30" />
-        <FaUserAlt className="twt_icon sz_30" />
-      </div>
       <div className="profile_form">
         <div className="profile_form_update">
           <input
@@ -21,7 +23,7 @@ const Profile = () => {
             className="field btn_lb"
           />
         </div>
-        <input type="button" value="Log Out" className="field btn_r" />
+        <input type="button" value="Log Out" className="field btn_r" onClick={click} />
       </div>
     </div>
   );
